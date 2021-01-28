@@ -1,5 +1,5 @@
 # kernel manaeger,inspired from SPECTRUM KERNEL MANAGER
-# by ZyCromerZ @ 2019
+# by RyuujiX @ 2021
 
 # Initialization
 on property:sys.boot_completed=1
