@@ -236,9 +236,9 @@ on property:persist.spectrum.profile=3
 	## Big gov Setting
     chonw system system /sys/devices/system/cpu/cpufreq/policy4/interactive/*
     chmod 0644 /sys/devices/system/cpu/cpufreq/policy4/interactive/*
-    write /sys/devices/system/cpu/cpufreq/policy4/interactive/target_loads "90 1113600:56 1401600:68 1747200:70 1958400:82 2150400:93 2208000:99"
-    write /sys/devices/system/cpu/cpufreq/policy4/interactive/above_hispeed_delay "32000 1113600:75000 1401600:80000 2150400:100000 2208000:150000"
-    write /sys/devices/system/cpu/cpufreq/policy4/interactive/hispeed_freq 2208000
+    write /sys/devices/system/cpu/cpufreq/policy4/interactive/target_loads "90 1113600:56 1401600:68 1747200:70 1958400:82 2150400:88 2208000:93 2457600:99"
+    write /sys/devices/system/cpu/cpufreq/policy4/interactive/above_hispeed_delay "32000 1113600:75000 1401600:80000 2150400:100000 2208000:150000 2457600:165000"
+    write /sys/devices/system/cpu/cpufreq/policy4/interactive/hispeed_freq 2457600
     write /sys/devices/system/cpu/cpufreq/policy4/interactive/go_hispeed_load 85
     write /sys/devices/system/cpu/cpufreq/policy4/interactive/align_windows 1
     write /sys/devices/system/cpu/cpufreq/policy4/interactive/min_sample_time "40000"
