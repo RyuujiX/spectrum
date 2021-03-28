@@ -3,9 +3,7 @@
 
 # Initialization
 on property:sys.boot_completed=1
-    # sh set vibration & spectrum support
-    write /sys/class/timed_output/vibrator/vtg_level 2300
-	write /sys/class/leds/vibrator/vmax_mv 1800
+    # sh spectrum support
     setprop spectrum.support 1
 	# Enable Force Fast Charge Feature by default
 	write /sys/kernel/fast_charge/force_fast_charge 1
@@ -40,9 +38,6 @@ on property:vendor.post_boot.parsed=1
     write /dev/stune/foreground/schedtune.boost 0
     write /dev/stune/rt/schedtune.boost 0
     write /dev/stune/top-app/schedtune.boost 0
-    # misc
-	write /sys/class/timed_output/vibrator/vtg_level 2300
-    write /sys/class/leds/vibrator/vmax_mv 1800
 	# Enable Force Fast Charge Feature by default
 	write /sys/kernel/fast_charge/force_fast_charge 1
 	# Set Display Resolution
@@ -108,6 +103,9 @@ on property:persist.spectrum.profile=2
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor "powersave"
     write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 0
     write /sys/class/kgsl/kgsl-3d0/throttling 1
+	## Vibration Strength
+	write /sys/class/timed_output/vibrator/vtg_level 1600
+    write /sys/class/leds/vibrator/vmax_mv 1400
     ## I/O Scheduler
     write /sys/block/mmcblk0/queue/scheduler row
     #thermal
@@ -183,6 +181,9 @@ on property:persist.spectrum.profile=0
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor "msm-adreno-tz"
     write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 0
     write /sys/class/kgsl/kgsl-3d0/throttling 1
+	## Vibration Strength
+	write /sys/class/timed_output/vibrator/vtg_level 2300
+    write /sys/class/leds/vibrator/vmax_mv 1800
     ## I/O Scheduler
     write /sys/block/mmcblk0/queue/scheduler bfq
     write /sys/block/mmcblk0/queue/read_ahead 2048
@@ -263,6 +264,9 @@ on property:persist.spectrum.profile=3
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor "msm-adreno-tz"
     write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 3
     write /sys/class/kgsl/kgsl-3d0/throttling 0
+	## Vibration Strength
+	write /sys/class/timed_output/vibrator/vtg_level 2300
+    write /sys/class/leds/vibrator/vmax_mv 1800
     ## I/O Scheduler
     write /sys/block/mmcblk0/queue/scheduler anxiety
     #thermal
@@ -317,6 +321,9 @@ on property:persist.spectrum.profile=1
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor "msm-adreno-tz"
     write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 2
     write /sys/class/kgsl/kgsl-3d0/throttling 0
+	## Vibration Strength
+	write /sys/class/timed_output/vibrator/vtg_level 2300
+    write /sys/class/leds/vibrator/vmax_mv 1800
     ## I/O Scheduler
     write /sys/block/mmcblk0/queue/scheduler anxiety
     #thermal
