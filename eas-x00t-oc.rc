@@ -40,28 +40,28 @@ on property:vendor.post_boot.parsed=1
 	write /sys/kernel/fast_charge/force_fast_charge 1
     ## Little min freq
     chmod 0644 /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq "300000"
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq "633600"
     ## Little max freq
     chmod 0644 /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq "1747200"
     ## Little min info
     chmod 0644 /sys/devices/system/cpu/cpufreq/policy0/cpuinfo_min_freq
-    write /sys/devices/system/cpu/cpufreq/policy0/cpuinfo_min_freq "300000"
+    write /sys/devices/system/cpu/cpufreq/policy0/cpuinfo_min_freq "633600"
     ## Little max info
     chmod 0644 /sys/devices/system/cpu/cpufreq/policy0/cpuinfo_max_freq
     write /sys/devices/system/cpu/cpufreq/policy0/cpuinfo_max_freq "1747200"
     ## Big min freq
     chmod 0644 /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
-    write /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq "300000"
+    write /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq "633600"
     ## Big max freq
     chmod 0644 /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq
     write /sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq "2150400"
     ## Big min info
     chmod 0644 /sys/devices/system/cpu/cpufreq/policy4/cpuinfo_min_freq
-    write /sys/devices/system/cpu/cpufreq/policy4/cpuinfo_min_freq "300000"
+    write /sys/devices/system/cpu/cpufreq/policy4/cpuinfo_min_freq "633600"
     ## Big max info
     chmod 0644 /sys/devices/system/cpu/cpufreq/policy4/cpuinfo_max_freq
-    write /sys/devices/system/cpu/cpufreq/policy4/cpuinfo_max_freq "2150400"
+    write /sys/devices/system/cpu/cpufreq/policy4/cpuinfo_max_freq "2150400"
     ## GPU
     write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 585000000
     write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 160000000
