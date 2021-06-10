@@ -38,6 +38,10 @@ on property:vendor.post_boot.parsed=1
 	write /proc/sys/kernel/sched_enable_thread_grouping 1
 	# Enable Force Fast Charge Feature by default
 	write /sys/kernel/fast_charge/force_fast_charge 1
+    ## Little gov
+    chmod 0644 /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor alucardsched
+    restorecon -R /sys/devices/system/cpu ## must restore after alucardsched
     ## Little min freq
     chmod 0644 /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq "633600"
@@ -50,6 +54,10 @@ on property:vendor.post_boot.parsed=1
     ## Little max info
     chmod 0644 /sys/devices/system/cpu/cpufreq/policy0/cpuinfo_max_freq
     write /sys/devices/system/cpu/cpufreq/policy0/cpuinfo_max_freq "1612800"
+	## Big gov
+    chmod 0644 /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
+    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor alucardsched
+    restorecon -R /sys/devices/system/cpu ## must restore after alucardsched
     ## Big min freq
     chmod 0644 /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
     write /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq "633600"
