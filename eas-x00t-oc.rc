@@ -75,6 +75,3 @@ on property:vendor.post_boot.parsed=1
     write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 160000000
     write /sys/class/kgsl/kgsl-3d0/max_clock_mhz 585
     write /sys/class/kgsl/kgsl-3d0/min_clock_mhz 160
-	## Vibration Strength
-	write /sys/class/timed_output/vibrator/vtg_level 2200
-    write /sys/class/leds/vibrator/vmax_mv 2200
