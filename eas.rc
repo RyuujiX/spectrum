@@ -38,8 +38,8 @@ on property:vendor.post_boot.parsed=1
 	write /sys/kernel/fast_charge/force_fast_charge 1
     ## Little gov
     chmod 0644 /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor alucardsched
-    restorecon -R /sys/devices/system/cpu ## must restore after alucardsched
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor schedutil
+    restorecon -R /sys/devices/system/cpu ## must restore after schedutil
     ## Little min freq
     chmod 0644 /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq "633600"
@@ -54,8 +54,8 @@ on property:vendor.post_boot.parsed=1
     write /sys/devices/system/cpu/cpufreq/policy0/cpuinfo_max_freq "1843200"
 	## Big gov
     chmod 0644 /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor alucardsched
-    restorecon -R /sys/devices/system/cpu ## must restore after alucardsched
+    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor schedutil
+    restorecon -R /sys/devices/system/cpu ## must restore after schedutil
     ## Big min freq
     chmod 0644 /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
     write /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq "633600"
