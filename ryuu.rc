@@ -226,9 +226,9 @@ on property:persist.spectrum.profile=3
     write /sys/devices/system/cpu/cpufreq/policy4/interactive/min_sample_time "40000"
     write /sys/devices/system/cpu/cpufreq/policy4/interactive/timer_rate "20000"
     ## GPU
-    write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 950000000
+    write /sys/class/kgsl/kgsl-3d0/devfreq/max_freq 750000000
     write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 370000000
-    write /sys/class/kgsl/kgsl-3d0/max_clock_mhz 950
+    write /sys/class/kgsl/kgsl-3d0/max_clock_mhz 750
     write /sys/class/kgsl/kgsl-3d0/min_clock_mhz 370
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor "msm-adreno-tz"
     write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 3
